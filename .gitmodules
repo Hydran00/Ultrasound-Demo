@@ -1,0 +1,12 @@
+[submodule "ultrasound_ws/Ultrasound-ROS2-WS"]
+	path = ultrasound_ws/src
+	url = git@github.com:Hydran00/Ultrasound-ROS2-WS.git
+[submodule "gui"]
+	path = gui
+	url = git@github.com:Hydran00/Ultrasound-Gui.git
+[submodule "haption_ws"]
+	path = haption_ws
+	url = git@github.com:idra-lab/haptic_interface_ROS2.git
+[submodule "unity_project"]
+	path = unity_project
+	url = git@github.com:Hydran00/Ultrasound-Unity.git
