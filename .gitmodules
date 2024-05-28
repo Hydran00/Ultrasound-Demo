@@ -11,5 +11,5 @@
 	path = unity_project
 	url = git@github.com:Hydran00/Ultrasound-Unity.git
 [submodule "src"]
-	path = robot_ws/src
+	path = robot_ws
 	url = git@github.com:Hydran00/Ultrasound-Setup.git
