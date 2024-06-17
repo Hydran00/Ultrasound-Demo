@@ -1,6 +1,6 @@
 [submodule "ultrasound_ws/Ultrasound-ROS2-WS"]
 	path = ultrasound_ws/src
-	url = git@github.com:Hydran00/Ultrasound-ROS2-WS.git
+	url = git@github.com:Hydran00/Ultrasound-leader-ros2.git
 [submodule "gui"]
 	path = leader/gui
 	url = git@github.com:Hydran00/Ultrasound-Gui.git
