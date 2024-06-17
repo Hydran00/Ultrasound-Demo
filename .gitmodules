@@ -1,5 +1,5 @@
 [submodule "ultrasound_ws/Ultrasound-ROS2-WS"]
-	path = ultrasound_ws/src
+	path = leader/ros_ws_leader/src
 	url = git@github.com:Hydran00/Ultrasound-leader-ros2.git
 [submodule "gui"]
 	path = leader/gui
@@ -13,3 +13,6 @@
 [submodule "src"]
 	path = follower/robot_setup
 	url = git@github.com:Hydran00/Ultrasound-Setup.git
+[submodule "follower/Ultrasound-follower-ros2"]
+	path = follower/ros_ws_follower/src
+	url = git@github.com:Hydran00/Ultrasound-follower-ros2.git
