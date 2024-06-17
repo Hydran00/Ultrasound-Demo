@@ -8,7 +8,7 @@
 	path = leader/haption_ws
 	url = git@github.com:idra-lab/haptic_interface_ROS2.git
 [submodule "unity_project"]
-	path = leader/unity_project
+	path = unity_project
 	url = git@github.com:Hydran00/Ultrasound-Unity.git
 [submodule "src"]
 	path = follower/robot_setup
