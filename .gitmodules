@@ -11,5 +11,5 @@
 	path = leader/unity_project
 	url = git@github.com:Hydran00/Ultrasound-Unity.git
 [submodule "src"]
-	path = follower/robot_ws
+	path = follower/robot_setup
 	url = git@github.com:Hydran00/Ultrasound-Setup.git
