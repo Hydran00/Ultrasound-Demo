@@ -2,7 +2,7 @@
 	path = leader/ros_ws_leader/src
 	url = git@github.com:Hydran00/Ultrasound-leader-ros2.git
 [submodule "gui"]
-	path = leader/gui
+	path = gui
 	url = git@github.com:Hydran00/Ultrasound-Gui.git
 [submodule "haption_ws"]
 	path = leader/haption_ws
