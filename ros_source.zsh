@@ -6,10 +6,10 @@ source /opt/ros/$ROS_DISTRO/setup.zsh
 export ROS_DOMAIN_ID=1
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export FASTRTPS_DEFAULT_PROFILES_FILE=/var/tmp/husarnet-fastdds-simple.xml
+
 # extract the path to the Ultrasound-Demo folder
 # this sould return something like "/home/username/Ultrasound-Demo"
-base_path="${PWD%%/Ultrasound-Demo/*}/Ultrasound-Demo"
-
+base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
 
 # ur workspace
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/ur_ws/install:"* ]]; then
@@ -47,5 +47,3 @@ if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/leader/haption_ws/install:"* ]]
     source ${base_path}/leader/haption_ws/install/local_setup.zsh
     echo "haption_ws sourced"
 fi
-
-# husarnet-dds singleshot
