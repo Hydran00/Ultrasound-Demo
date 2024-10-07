@@ -10,7 +10,7 @@ export FASTRTPS_DEFAULT_PROFILES_FILE=/var/tmp/husarnet-fastdds-simple.xml
 # extract the path to the Ultrasound-Demo folder
 # this sould return something like "/home/username/Ultrasound-Demo"
 base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
-
+# base_path=/home
 # ur workspace
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/ur_ws/install:"* ]]; then
   source ${base_path}/follower/robot_setup/ur_ws/install/setup.bash
