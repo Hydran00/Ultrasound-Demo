@@ -16,3 +16,13 @@
 [submodule "follower/Ultrasound-follower-ros2"]
 	path = follower/ros_ws_follower/src
 	url = git@github.com:Hydran00/Ultrasound-follower-ros2.git
+[submodule "body_modelling/SKEL"]
+	path = body_modelling/SKEL
+	url = git@github.com:Hydran00/SKEL.git
+[submodule "body_modelling/ros2_ws/src/smplx_from_skeleton_tracking_ROS2"]
+	path = body_modelling/ros2_ws/src/smplx_from_skeleton_tracking_ROS2
+	url = git@github.com:Hydran00/smplx_from_skeleton_tracking_ROS2.git
+[submodule "body_modelling/ros2_ws/src/zed_body_publisher"]
+	path = body_modelling/ros2_ws/src/zed_body_publisher
+	url = git@github.com:Hydran00/zed_body_publisher.git
+	branch = yolo-seg

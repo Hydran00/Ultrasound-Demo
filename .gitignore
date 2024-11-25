@@ -3,3 +3,8 @@
 **/install/
 **/log/
 follower/VRBuilds/
+**/**.obj
+**/**.ply
+**/**.pcd
+**/**.txt
+**/**.pt
