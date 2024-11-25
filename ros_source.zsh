@@ -47,3 +47,9 @@ if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/leader/haption_ws/install:"* ]]
     source ${base_path}/leader/haption_ws/install/local_setup.zsh
     echo "haption_ws sourced"
 fi
+
+# body modelling pipeline
+if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/body_modelling/ros2_ws/install:"* ]]; then
+  source ${base_path}/body_modelling/ros2_ws/install/local_setup.zsh
+  echo "body modelling sourced"
+fi

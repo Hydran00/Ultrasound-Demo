@@ -9,7 +9,7 @@
   ```docker pull hydran00/skel```
 
 ## Installation
-### Body Modelling
+### Body Modelling (Docker)
 - Launch docker container
   ```
   docker run  --rm -dti --name "skel" -e DISPLAY=$DISPLAY --net=host --ipc=shareable --gpus all -v ~/Ultrasound_ws/body_modelling/:/home/ -v ~/Ultrasound_ws/body_modelling/memory_mapped_folder:/home/mmap/ hydran00/skel
@@ -29,9 +29,32 @@
     ```
     python scripts/setup_smpl.py /path/to/SMPL_python_v.1.1.0.zip  
     ```
-### Zed module
-- Build the zed ros workspace
+### Body Modelling (local)
+- Build the zed ros workspace that contains the body segmentation node and the zed wrapper (with the `.xacro` of the camera).
     ```
-    cd ~/Ultrasound_ws/body_modelling/zed_ros2_ws
-    colcon build --symlink-install
+    sudo apt update
+    cd ~/Ultrasound_ws/body_modelling/ros2_ws
+    rosdep update
+    rosdep install --from-paths src --ignore-src -r -y
+    colcon build --symlink-install --cmake-args=-DCMAKE_BUILD_TYPE=Release
     ```
+
+## Run the experiments
+### Launch the robot controller 
+Enter sudo mode
+```
+sudo su
+```
+Calibrate the haptic interface
+```
+source ros_source.sh
+ros2 launch haptic_control auto_calibration.launch.py
+```
+Enter the guy
+```
+cd gui/
+python3 main.py
+```
+And press the `Follower Launcher` button.
+### Launch the body modelling
+

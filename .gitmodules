@@ -26,3 +26,6 @@
 	path = body_modelling/ros2_ws/src/zed_body_publisher
 	url = git@github.com:Hydran00/zed_body_publisher.git
 	branch = yolo-seg
+[submodule "body_modelling/ros2_ws/src/zed-ros2-wrapper"]
+	path = body_modelling/ros2_ws/src/zed-ros2-wrapper
+	url = git@github.com:stereolabs/zed-ros2-wrapper.git
