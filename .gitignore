@@ -8,3 +8,9 @@ follower/VRBuilds/
 **/**.pcd
 **/**.txt
 **/**.pt
+**/memory_mapped_folder/
+**/mmap/
+**/**.pkl
+**/**.obj
+**/**.ply
+**/skel_venv/
