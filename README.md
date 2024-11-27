@@ -18,7 +18,7 @@ Teleoperation of Lung Ultrasound Examinations".
 
 <b>Note, this repository NEEDS to be cloned in the HOME directory and not renamed!</b>
 ```
-git clone -b icra2024 git@github.com:Hydran00/Ultrasound-Demo.git
+git clone --recursive -b icra2024 git@github.com:Hydran00/Ultrasound-Demo.git
 ```
 ### Body Modelling (Docker)
 - Launch docker container
