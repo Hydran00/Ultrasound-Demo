@@ -1,4 +1,4 @@
-# Anatomical Virtual Fixtures
+# Shared Control Virtual Fixtures 
 Official code repository of "An Anatomy-Aware Shared Control Approach for Assisted
 Teleoperation of Lung Ultrasound Examinations".
 
