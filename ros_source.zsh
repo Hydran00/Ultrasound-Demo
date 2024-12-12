@@ -6,7 +6,7 @@ source /opt/ros/$ROS_DISTRO/setup.zsh
 export ROS_DOMAIN_ID=1
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export FASTRTPS_DEFAULT_PROFILES_FILE=/var/tmp/husarnet-fastdds-simple.xml
-
+export RCUTILS_COLORIZED_OUTPUT=1
 # extract the path to the Ultrasound-Demo folder
 # this sould return something like "/home/username/Ultrasound-Demo"
 base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
