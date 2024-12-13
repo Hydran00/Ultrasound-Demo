@@ -11,22 +11,10 @@ export RCUTILS_COLORIZED_OUTPUT=1
 # this sould return something like "/home/username/Ultrasound-Demo"
 base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
 # base_path=/home
-# ur workspace
+# kuka workspace
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/ur_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/ur_ws/install/setup.bash
-  echo "ur_ws sourced"
-fi
-
-# controllers
-if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/controller_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/controller_ws/install/setup.bash
-  echo "controller_ws sourced"
-fi
-
-# force torque sensor
-if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/bota_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/bota_ws/install/setup.bash
-  echo "force_torque_sensor_ws sourced"
+  source ${base_path}/follower/robot_setup/install/setup.bash
+  echo "kuka_ws sourced"
 fi
 
 # ultrasound workspace (leader)

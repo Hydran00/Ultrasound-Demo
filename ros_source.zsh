@@ -11,24 +11,11 @@ export RCUTILS_COLORIZED_OUTPUT=1
 # this sould return something like "/home/username/Ultrasound-Demo"
 base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
 
-# ur workspace
-if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/ur_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/ur_ws/install/local_setup.zsh
-  echo "ur_ws sourced"
+# kuka workspace
+if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/install:"* ]]; then
+  source ${base_path}/follower/robot_setup/install/setup.bash
+  echo "kuka_ws sourced"
 fi
-
-# controllers
-if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/controller_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/controller_ws/install/local_setup.zsh
-  echo "controller_ws sourced"
-fi
-
-# force torque sensor
-if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/bota_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/bota_ws/install/local_setup.zsh
-  echo "force_torque_sensor_ws sourced"
-fi
-
 # ultrasound workspace (leader)
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/leader/ros_ws_leader/install:"* ]]; then
   source ${base_path}/leader/ros_ws_leader/install/local_setup.zsh
