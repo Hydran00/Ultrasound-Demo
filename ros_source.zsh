@@ -13,7 +13,7 @@ base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
 
 # kuka workspace
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/install/setup.bash
+  source ${base_path}/follower/robot_setup/install/local_setup.zsh
   echo "kuka_ws sourced"
 fi
 # ultrasound workspace (leader)
