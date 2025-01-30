@@ -12,7 +12,7 @@
 	path = unity_project
 	url = git@github.com:Hydran00/Ultrasound-Unity.git
 [submodule "src"]
-	path = follower/robot_setup
+	path = follower/kuka_setup
 	url = git@github.com:Hydran00/Ultrasound-Setup.git
 	branch = main
 [submodule "follower/ros_ws_follower/Ultrasound-follower-ros2"]
