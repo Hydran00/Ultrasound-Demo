@@ -12,8 +12,8 @@ export RCUTILS_COLORIZED_OUTPUT=1
 base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
 # base_path=/home
 # kuka workspace
-if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/robot_setup/ur_ws/install:"* ]]; then
-  source ${base_path}/follower/robot_setup/install/setup.bash
+if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/kuka_setup/ur_ws/install:"* ]]; then
+  source ${base_path}/follower/kuka_setup/install/setup.bash
   echo "kuka_ws sourced"
 fi
 

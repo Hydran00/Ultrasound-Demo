@@ -2,7 +2,7 @@
 # check if the paths are not in $COLCON_PREFIX_PATH
 
 # ROS2
-source /opt/ros/$ROS_DISTRO/setup.zsh
+source /opt/ros/$ROS_DISTRO/local_setup.zsh
 export ROS_DOMAIN_ID=1
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 export FASTRTPS_DEFAULT_PROFILES_FILE=/var/tmp/husarnet-fastdds-simple.xml
@@ -10,12 +10,18 @@ export RCUTILS_COLORIZED_OUTPUT=1
 # extract the path to the Ultrasound-Demo folder
 # this sould return something like "/home/username/Ultrasound-Demo"
 base_path=${PWD%Ultrasound-Demo*}/Ultrasound-Demo
-
+# base_path=/home
 # kuka workspace
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/kuka_setup/install:"* ]]; then
   source ${base_path}/follower/kuka_setup/install/local_setup.zsh
   echo "kuka_ws sourced"
 fi
+# bota
+if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/follower/bota_ws/install:"* ]]; then
+  source ${base_path}/follower/bota_ws/install/local_setup.zsh
+  echo "bota ws sourced"
+fi
+
 # ultrasound workspace (leader)
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/leader/ros_ws_leader/install:"* ]]; then
   source ${base_path}/leader/ros_ws_leader/install/local_setup.zsh
@@ -33,4 +39,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${base_path}/leader/haption_ws/src/hapti
 if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}/leader/haption_ws/install:"* ]]; then
     source ${base_path}/leader/haption_ws/install/local_setup.zsh
     echo "haption_ws sourced"
+fi
+
+# body fitting
+if [[ ":$COLCON_PREFIX_PATH:" != *":${base_path}../SKEL_WS/ros2_ws/install:"* ]]; then
+  source ${base_path}/../SKEL_WS/ros2_ws/install/local_setup.zsh
+  echo "body fitting sourced"
 fi
